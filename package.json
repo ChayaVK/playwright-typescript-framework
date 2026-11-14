@@ -1,0 +1,12 @@
+{
+  "name": "playwright-typescript-framework",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Playwright + TypeScript tests for ShopEasy",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "playwright": "1.63.0"
+  }
+}
