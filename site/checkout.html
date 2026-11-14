@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>ShopEasy - Checkout</title></head>
+<body>
+  <h1>Checkout</h1>
+  <p>Cart total: <strong id="total">Rs. 1,499</strong></p>
+  <form id="checkout">
+    <label for="name">Full name</label>
+    <input id="name" type="text">
+    <label for="address">Address</label>
+    <input id="address" type="text">
+    <button type="submit">Place order as guest</button>
+  </form>
+  <p id="confirmation" role="status"></p>
+  <script>
+    document.getElementById('checkout').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const address = document.getElementById('address').value.trim();
+      document.getElementById('confirmation').textContent =
+        name && address ? 'Order placed! Order number: 1005' : 'Please fill in your name and address';
+    });
+  </script>
+</body>
+</html>
